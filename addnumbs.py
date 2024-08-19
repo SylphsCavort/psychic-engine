@@ -1,12 +1,21 @@
-# This is the first version.
+# This is v1.2
 
-num_1 = int(input("First number >"))
-num_2 = int(input("Second number>"))
-
-def adds_numbs(num_1,num_2):
+def adds_numbs(num_1, num_2):
     result = num_1 + num_2
-    return result
+    print(result)
 
-result = adds_numbs(num_1,num_2)
+def combineit(num_1, num_2):
+    result = str(num_1) + str(num_2)
+    print(result)
 
-print(result)
+user_input = input('Type "add" or "combine" > ')
+
+num_1 = int(input("First number > "))
+num_2 = int(input("Second number> "))
+
+# Output based on first user choice
+if user_input == "add":
+    adds_numbs(num_1,num_2)
+
+elif user_input == "combine":
+    combineit(num_1,num_2)
